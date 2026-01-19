@@ -147,6 +147,7 @@
     border-radius: 0.75rem;
     background: var(--color-bg-primary);
     box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
 }
 
 .stat-icon {
@@ -194,6 +195,7 @@
     border-radius: 0.75rem;
     background: var(--color-bg-primary);
     box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
 }
 
 @media (min-width: 1024px) {
@@ -207,6 +209,7 @@
     border-radius: 0.75rem;
     background: var(--color-bg-primary);
     box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
 }
 
 .card-title {

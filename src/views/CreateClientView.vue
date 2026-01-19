@@ -290,6 +290,7 @@ const handleSubmit = async () => {
     border-radius: 0.75rem;
     box-shadow: var(--shadow-sm);
     overflow: hidden;
+    border: 1px solid var(--color-border);
 }
 
 .form {
@@ -351,6 +352,7 @@ const handleSubmit = async () => {
     color: var(--color-text-primary);
     font-size: 0.875rem;
     transition: border-color var(--transition-base);
+    box-shadow: var(--shadow-sm);
 }
 
 .form-group input:focus,

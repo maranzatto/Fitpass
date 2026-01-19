@@ -218,6 +218,7 @@ const getStatusText = (status: string) => {
     background: var(--color-bg-primary);
     border-color: var(--color-border);
     color: var(--color-text-primary);
+    box-shadow: var(--shadow-sm);
 }
 
 .search-box input {
@@ -238,6 +239,7 @@ const getStatusText = (status: string) => {
     background: var(--color-bg-primary);
     border-color: var(--color-border);
     color: var(--color-text-primary);
+    box-shadow: var(--shadow-sm);
 }
 
 .table-container {
@@ -245,6 +247,7 @@ const getStatusText = (status: string) => {
     border-radius: 0.75rem;
     background: var(--color-bg-primary);
     box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
 }
 
 .clients-table {

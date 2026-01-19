@@ -26,7 +26,10 @@
 
 <style scoped>
 .sidebar {
-    @apply w-[220px] h-screen flex flex-col;
+    width: 220px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     background: var(--color-primary);
     color: var(--color-white);
     padding: var(--spacing-lg);
@@ -43,23 +46,28 @@
 
 .menu,
 .bottom-menu {
-    @apply list-none;
+    list-style: none;
     padding: 0;
 }
 
 .menu li,
 .bottom-menu li {
-    @apply flex items-center cursor-pointer;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
     gap: var(--spacing-sm);
     margin: var(--spacing-md) 0;
     font-size: var(--font-size-base);
     padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--border-radius-md);
-    transition: background var(--transition-base);
+    transition: all var(--transition-base);
+    position: relative;
 }
 
 .menu-link {
-    @apply flex items-center flex-1;
+    display: flex;
+    align-items: center;
+    flex: 1;
     gap: var(--spacing-sm);
     color: inherit;
     text-decoration: none;
@@ -67,20 +75,44 @@
 
 .menu-link.router-link-active {
     color: var(--color-white);
-    background: var(--color-active);
+    font-weight: 500;
+}
+
+.menu-link.router-link-active::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 24px;
+    background: var(--color-white);
+    border-radius: 0 4px 4px 0;
 }
 
 .menu li:hover,
 .bottom-menu li:hover {
-    background: var(--color-hover);
+    background: var(--color-sidebar-hover);
+    transform: translateX(2px);
+}
+
+.menu li:hover .menu-link.router-link-active,
+.bottom-menu li:hover .menu-link.router-link-active {
+    color: var(--color-white);
 }
 
 .menu li i,
 .bottom-menu li i {
-    @apply opacity-85;
+    opacity: 0.85;
+    transition: opacity var(--transition-base);
+}
+
+.menu li:hover i,
+.bottom-menu li:hover i {
+    opacity: 1;
 }
 
 .bottom-menu {
-    @apply mt-auto;
+    margin-top: auto;
 }
 </style>
